@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marlon Lozano | Portafolio Retro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(#0f0f0f, #000000);
+      color: #00ffcc;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: repeating-linear-gradient(135deg, #111, #222 1px, #111 2px);
+      text-shadow: 0 0 8px #00ffff;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% {opacity: 1;}
+      100% {opacity: 0.95;}
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    p.sub {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #121212;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #00ffee;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #00ffee;
+      left: 0;
+      bottom: -4px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: right;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(20, 20, 20, 0.75);
+      box-shadow: 0 0 10px #00ffee33;
+      border-radius: 8px;
+    }
+
+    section h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #00ffee44;
+      padding-bottom: 0.5rem;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social a {
+      margin: 0 1rem;
+      color: #ff00cc;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Marlon Lozano</h1>
+    <p class="sub">MC | Beatmaker | Escritor 90's Visionario</p>
+  </header>
+
+  <nav>
+    <a href="#musica">Música</a>
+    <a href="#letras">Letras</a>
+    <a href="#videos">Videos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="musica">
+    <h2>Música</h2>
+    <p>Beats, loops, y atmósferas. Aquí va tu SoundCloud, Audius o un reproductor HTML5.</p>
+  </section>
+
+  <section id="letras">
+    <h2>Letras & Textos</h2>
+    <p>Versos, escritura poética o ideas narrativas que quieras mostrar.</p>
+  </section>
+
+  <section id="videos">
+    <h2>Videos</h2>
+    <p>Embeds de TikTok, Instagram o YouTube. Dale vida a lo visual de tu universo lírico.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres colaborar? Envíame un mensaje o sígueme.</p>
+    <div class="social">
+      <a href="https://instagram.com/tu_usuario" target="_blank">Instagram</a>
+      <a href="https://tiktok.com/@tu_usuario" target="_blank">TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    © Marlon Lozano | Retro Soul desde los 90s | ✧
+  </footer>
+</body>
+</html>
