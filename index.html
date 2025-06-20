@@ -1,42 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portafolio - Alex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Ingeniería Civil - Marlon</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hi. I’m Alex ✌️</h1>
-    <p>Front-end development enthusiast with a passion for intuitive and dynamic user experiences.</p>
+  <header class="hero">
+    <div class="overlay-text">
+      <h1>Ing. Marlon Lozano</h1>
+      <p>Espc. Diseño Sismorresistente de Estructuras de Concreto Armado y Metal</p>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="img/proyecto1.jpg" alt="Proyecto 1" />
+        <img src="img/proyecto2.jpg" alt="Proyecto 2" />
+        <img src="img/proyecto3.jpg" alt="Proyecto 3" />
+      </div>
+      <button class="nav prev">&#10094;</button>
+      <button class="nav next">&#10095;</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="carousel">
-    <h2>Proyectos</h2>
-    <div class="slider">
-      <div class="slide">
-        <img src="img/proyecto1.jpg" alt="Proyecto 1" />
-        <div class="caption">
-          <h3>Mpv Anime Onegai</h3>
-          <p>MVP de propuestas funcionales y cambios visuales.</p>
-        </div>
+  <section id="servicios">
+    <h2>Servicios por Nivel de Proyecto</h2>
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>🧱 Proyecto Simple</h3>
+        <p>Desde $30 hasta $150. Ideal para planos de albañilería básica, análisis rápido de cargas o asesoría puntual.</p>
       </div>
-      <div class="slide">
-        <img src="img/proyecto2.jpg" alt="Proyecto 2" />
-        <div class="caption">
-          <h3>Proyecto 2</h3>
-          <p>Descripción breve del proyecto.</p>
-        </div>
+      <div class="plan">
+        <h3>🏗 Proyecto Intermedio</h3>
+        <p>Entre $150 y $800. Incluye estructuras más detalladas como reservorios pequeños, análisis sísmico, y planos completos de obra.</p>
       </div>
-      <div class="slide">
-        <img src="img/proyecto3.jpg" alt="Proyecto 3" />
-        <div class="caption">
-          <h3>Proyecto 3</h3>
-          <p>Descripción breve del proyecto.</p>
-        </div>
+      <div class="plan">
+        <h3>🏢 Proyecto Complejo</h3>
+        <p>Desde $800 a más. Diseños estructurales integrales como edificaciones de varios niveles, reservorios de gran escala o estructuras especiales.</p>
       </div>
     </div>
   </section>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Ingeniero civil con experiencia en estructuras hidráulicas y edificaciones resistentes. Me enfoco en soluciones optimizadas y adaptadas al contexto del cliente.</p>
+    <p><a href="cv_marlon.pdf" target="_blank">Descargar CV</a></p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes un proyecto en mente? ¡Hablemos por WhatsApp!</p>
+    <a href="https://wa.me/519XXXXXXXX?text=Hola%20Marlon,%20vi%20tu%20portafolio%20y%20quisiera%20consultarte%20sobre..." class="whatsapp-button" target="_blank">Contactar por WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Marlon – Ingeniería Civil Estructural</p>
+  </footer>
+
+  <script>
+    const slider = document.querySelector('.slider');
+    const images = document.querySelectorAll('.slider img');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let current = 0;
+
+    function updateSlider(index) {
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      current = index;
+    }
+
+    prev.addEventListener('click', () => updateSlider(current - 1));
+    next.addEventListener('click', () => updateSlider(current + 1));
+  </script>
 </body>
 </html>
