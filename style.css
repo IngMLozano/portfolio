@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'raconoldcarbonbold';
+  src: url('fonts/racon-old-carbon-bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'raconoldcarbonbold', sans-serif;
   margin: 0;
   background: #111;
   color: white;
