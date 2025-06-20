@@ -150,7 +150,8 @@ h2 {
 }
 .descripcion-habilidades {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 
