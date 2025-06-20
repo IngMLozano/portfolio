@@ -209,11 +209,13 @@ h2 {
   color: #ffffff;
   margin-top: 5px;
 }
+
+/* Btn contacto */
 .cta {
   text-align: center;
   padding: 60px 20px;
   background-color: #0d0d0d;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .cta h2 {
