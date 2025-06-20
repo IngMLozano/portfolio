@@ -1,8 +1,8 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f5f5f5;
-  color: #2d3436;
+  background: #111;
+  color: white;
 }
 
 header {
@@ -25,7 +25,7 @@ header p {
 
 .carousel {
   padding: 40px 20px;
-  background: #121212;
+  background: #111;
 }
 
 .carousel h2 {
@@ -84,10 +84,11 @@ section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  background-color: #111;
 }
 
 h2 {
-  color: #2d3436;
+  color: #00f0ff;
   margin-bottom: 20px;
   border-left: 4px solid #00b894;
   padding-left: 10px;
@@ -100,11 +101,11 @@ h2 {
 }
 
 .plan {
-  background-color: #ffffff;
-  border: 1px solid #dcdde1;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 
@@ -113,11 +114,12 @@ h2 {
 }
 
 .plan h3 {
-  color: #0984e3;
+  color: #00b894;
 }
 
 .plan p {
   margin-top: 10px;
+  color: #ccc;
 }
 
 /* Botón flotante/transparente */
@@ -175,13 +177,13 @@ h2 {
   display: block;
   margin-top: 10px;
   font-weight: bold;
-  color: #2d3436;
+  color: #00f0ff;
 }
 
 .skill strong {
   display: block;
   font-size: 1.2em;
-  color: #0984e3;
+  color: #ffffff;
   margin-top: 5px;
 }
 
