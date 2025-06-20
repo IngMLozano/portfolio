@@ -154,19 +154,10 @@ h2 {
   margin-left: 0;
 }
 
-
 .descripcion-habilidades li {
   margin-bottom: 10px;
   font-size: 1.05em;
-  padding-left: 20px;
-  position: relative;
-}
-
-.descripcion-habilidades li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #00b894;
+  padding-left: 0;
 }
 /* Habilidades circulares */
 .skills {
