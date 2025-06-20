@@ -4,28 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portafolio de Ingeniería Civil - Marlon</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #00b894;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #2d3436;
+      margin-bottom: 20px;
+      border-left: 4px solid #00b894;
+      padding-left: 10px;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* SLIDER ESTILO CARRUSEL */
+    .slider-container {
+      position: relative;
+      width: 70%;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slider-track {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 2;
+      display: none;
+    }
+
+    .slider-container:hover .slider-btn {
+      display: block;
+    }
+
+    .slider-btn.prev { left: 0; }
+    .slider-btn.next { right: 0; }
+  </style>
 </head>
 <body>
 
-  <!-- SLIDER VISUAL -->
-  <div class="catalog-slider">
-    <div class="slider-track">
-      <div class="slide-card">
-        <img src="img/proyecto1.jpg" alt="Reservorio terminado">
+  <!-- SLIDER DE IMÁGENES -->
+  <div class="slider-container">
+    <div class="slider-track" id="slider-track">
+      <div class="slide">
+        <img src="img/proyecto1.jpg" alt="Reservorio 1">
       </div>
-      <div class="slide-card">
-        <img src="img/proyecto2.jpg" alt="Casa de albañilería">
+      <div class="slide">
+        <img src="img/proyecto2.jpg" alt="Albañilería 2">
       </div>
-      <div class="slide-card">
-        <img src="img/proyecto3.jpg" alt="Vista aérea del proyecto">
+      <div class="slide">
+        <img src="img/proyecto3.jpg" alt="Vista aérea 3">
       </div>
     </div>
-    <button class="slider-btn prev">&#10094;</button>
-    <button class="slider-btn next">&#10095;</button>
+    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
   </div>
 
-  <!-- CONTENIDO DE TU PORTAFOLIO AQUÍ -->
+  <!-- CONTENIDO DEL PORTAFOLIO -->
   <header>
     <h1>Marlon – Ingeniería Civil Estructural</h1>
     <nav>
@@ -46,19 +145,17 @@
     <p>© 2025 Marlon – Ingeniería Civil Estructural</p>
   </footer>
 
-  <!-- SLIDER SCRIPT -->
+  <!-- SCRIPT DE FUNCIONAMIENTO DEL SLIDER -->
   <script>
-    const slider = document.querySelector(".slider-track");
-    const prevBtn = document.querySelector(".slider-btn.prev");
-    const nextBtn = document.querySelector(".slider-btn.next");
+    let currentSlide = 0;
+    const track = document.getElementById('slider-track');
+    const totalSlides = track.children.length;
 
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: 300, behavior: "smooth" });
-    });
-
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: -300, behavior: "smooth" });
-    });
+    function moveSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
   </script>
+
 </body>
 </html>
