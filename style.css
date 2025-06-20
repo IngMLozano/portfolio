@@ -209,6 +209,34 @@ h2 {
   color: #ffffff;
   margin-top: 5px;
 }
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  margin-top: 60px;
+}
+
+.cta h2 {
+  color: #00f0ff;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.btn-filled {
+  display: inline-block;
+  background-color: #00b894;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-filled:hover {
+  background-color: #019270;
+}
 
 footer {
   background-color: #1f1f1f;
