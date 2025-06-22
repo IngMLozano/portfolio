@@ -5,139 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio - Marlon Lozano</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
 </head>
 <body>
   <header>
-    <h1>Ing. Marlon Lozano</h1>
+    <h1>Marlon Lozano</h1>
+    <div class="profesion">
+      <small>Ing. Civil Estructural</small>
+    </div>
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="menu-principal">
+      <button data-section="sobre-mi">Sobre mí</button>
+      <button data-section="proyectos">Proyectos</button>
+      <button data-section="habilidades">Habilidades</button>
+      <button data-section="contacto">Contacto</button>
+      
+    </nav>
   </header>
 
-  <section class="carousel">
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="seccion carousel">
     <h2>Proyectos</h2>
-    
-    <div class="slider">
-      <div class="slide">
-        <img src="img/proyecto1.jpg" alt="Proyecto 1" />
-        <div class="caption">
-          <h3>Reservorio 180m3 para Riego</h3>
-          <p>Memoria de Cálculo, Planos: Estructuras y MEP</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/proyecto2.jpg" alt="Proyecto 2" />
-        <div class="caption">
-          <h3>Centro Médico</h3>
-          <p>Memoria de Cálculo, Planos: Estructuras y MEP</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/proyecto3.jpg" alt="Proyecto 2" />
-        <div class="caption">
-          <h3>Centro Médico</h3>
-          <p>Memoria de Cálculo, Planos: Estructuras y MEP</p>
-        </div>
-       </div>
-      <div class="slide">
-        <img src="img/proyecto4.jpg" alt="Proyecto 2" />
-        <div class="caption">
-          <h3>Centro Médico</h3>
-          <p>Memoria de Cálculo, Planos: Estructuras y MEP</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/proyecto5.jpg" alt="Proyecto 2" />
-        <div class="caption">
-          <h3>Centro Médico</h3>
-          <p>Memoria de Cálculo, Planos: Estructuras y MEP</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="img/proyecto6.jpg" alt="Proyecto 3" />
-        <div class="caption">
-          <h3>Electricas Facultad Molina</h3>
-          <p>Corrección de MEP electricas.</p>
-        </div>
+    <div class="contenedor-slider">
+      <div class="slider">
+        <!-- Se llenará dinámicamente con JavaScript -->
       </div>
     </div>
   </section>
 
-  <section id="servicios">
-    <h2>Servicios por Nivel de Proyecto</h2>
-    <div class="plan-grid">
-      <div class="plan">
-        <h3>🧱 Simple</h3>
-        <p>Desde $30 hasta $199. Ideal para metrados o dibujo de planos 2D de estructuras pequeñas, visitas de supervisión o asesorías para corrección de planos.</p>
-      </div>
-      <div class="plan">
-        <h3>🏗 Intermedio</h3>
-        <p>Entre $200 y $1000. Ideal para estructuras más detalladas como reservorios pequeños, levantamientos topograáficos, dibujo de planos completos 2D y 3D de Estructuras y MEP.</p>
-      </div>
-      <div class="plan">
-        <h3>🏢 Complejo</h3>
-        <p>Desde $1000 a más. Diseños estructurales integrales como edificaciones de varios niveles, y/o estructuras especiales. Expedientes de carreteras.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre-mi">
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="seccion">
     <h2>Sobre mí</h2>
-    <p>Ingeniero civil con experiencia en estructuras de concreto armado y metras, estructuras hidráulicas y carreteras. Me enfoco en soluciones optimizadas y adaptadas al contexto del cliente.</p>
+    <div class="sobre-mi-texto">
+    <p>Ingeniero civil con experiencia en estructuras de concreto armado y metal, estructuras hidráulicas y carreteras. Me enfoco en soluciones optimizadas y adaptadas al contexto del cliente.</p>
+    
     <a href="cv_marlonlozanov.pdf" class="btn-transparent" target="_blank">Descargar CV</a>
+    </div>
+  </section>
 
-    <h3 class="subtitulo">Habilidades</h3>
-    <ul class="descripcion-habilidades">
-      <li>📐 Diseño sismorresistente de estructuras de concreto armado y metal</li>
-      <li>📸 Levantamientos topográficos con estación total y drone</li>
-      <li>🛣️ Expedientes técnicos de estructuras y carreteras</li>
-    </ul>
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="seccion">
+    <h2>Habilidades</h2>
+
+
 
     <div class="skills">
-      
       <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>Sap2000, ETABS, SAFE</span>
-        <strong>Experto</strong>
+        
+        <span>Sap2000, ETABS</span>
+        <small>Experto</small>
       </div>
+
+
       <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>CYPE</span>
-        <strong>Intermedio</strong>
+        
+        <span>SAFE, Geo5</span>
+        <small>Experto</small>
       </div>
+
       <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>Civil 3D</span>
-        <strong>Experto</strong>
+        
+        <span>Tekla Structures</span>
+        <small>Intermedio</small>
       </div>
-      
+
       <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>S10</span>
-        <strong>Experto</strong>
-      </div>
-      <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
+        
         <span>Archicad</span>
-        <strong>Intermedio</strong>
+        <small>Intermedio</small>
       </div>
+
       <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>HTML, CSS, JAVASCRIPT</span>
-        <strong>Básico</strong>
+        
+        <span>Python, LISP</span>
+        <small>Básico</small>
       </div>
-      <div class="skill">
-        <svg><circle cx="50" cy="50" r="40"></circle></svg>
-        <span>Python, C#</span>
-        <strong>Básico</strong>
-      </div>
-      <!-- agregar más-->
     </div>
   </section>
-  <section id="contacto" class="cta">
-    <h2>¿Tienes un proyecto en mente? Hablemos por WhatsApp</h2>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="seccion cta">
+    <h2>¿Tienes un proyecto en mente? ¡Hablemos por WhatsApp!</h2>
     <a href="https://wa.me/51930295296" target="_blank" class="btn-filled">Contáctame</a>
   </section>
 
   <footer>
-    <p>© 2025 Marlon Lozano - Ing. Civil Estructural</p>
+    <p>© 2025 Marlon Lozano. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Script dinámico -->
+  <script src="script.js"></script>
 </body>
 </html>
