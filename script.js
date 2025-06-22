@@ -2,6 +2,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log("Script cargado correctamente");
 
   const slider = document.querySelector(".slider");
+
+  // Scroll horizontal con la rueda del mouse
+  if (slider) {
+    slider.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        slider.scrollBy({
+          left: e.deltaY,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
   const secciones = document.querySelectorAll(".seccion");
   const botonesMenu = document.querySelectorAll(".menu-principal button");
 
