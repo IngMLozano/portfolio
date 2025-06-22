@@ -1,0 +1,7 @@
+{
+  "titulo": "Centro Médico - La Molina",
+  "descripcion": "Diseño estructural completo de centro médico con 2 niveles",
+  "precio": "$2500",
+  "duracion": "2 semanas",
+  "imagenes": ["foto1.jpg", "foto2.jpg", "foto3.jpg"]
+}
