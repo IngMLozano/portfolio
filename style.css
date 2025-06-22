@@ -105,13 +105,26 @@ section h2 {
 }
 
 /* Slider dinámico */
+
 .slider {
   display: flex;
   overflow-x: auto;
   gap: 20px;
   scroll-snap-type: x mandatory;
+  padding-top: 20px;
   padding-bottom: 20px;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none; 
 }
+
+.slider::-webkit-scrollbar {
+  display: none;/* Chrome, Safari, Opera */
+}
+
 .contenedor-slider {
   max-width: 1000px;
   margin: 0 auto;
